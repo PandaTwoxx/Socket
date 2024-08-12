@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "socket"
+version = "0.1.0"
+description = ""
+authors = ["Weston Gorczyca <weston.gorczyca@gmail.com>"]
+license = "CC0 1.0 Universal"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+asyncio = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
