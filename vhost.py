@@ -25,11 +25,15 @@ class vhost:
     def update(self, new_data):
         self.data = new_data
 
-    async def stop(self):
+    async def end(self):
         if self.server:
             self.server.close()
             await self.server.wait_closed()
             self.server = None
             print("Server stopped")
 
-    
+    def stop(self):
+        asyncio.create_task(self.end())
+        
+    def begin(self):
+        asyncio(self.host())
